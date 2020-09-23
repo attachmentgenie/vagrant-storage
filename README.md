@@ -1,4 +1,4 @@
-#  vagrant-example
+#  vagrant-storage
 
 vagrant starter kit 
 

@@ -10,3 +10,12 @@
 [submodule "modules/firewall"]
 	path = production/modules/firewall
 	url = git@github.com:puppetlabs/puppetlabs-firewall.git
+[submodule "production/modules/minio"]
+	path = production/modules/minio
+	url = https://github.com/kogitoapp/puppet-minio.git
+[submodule "production/modules/remote_file"]
+	path = production/modules/remote_file
+	url = https://github.com/lwf/puppet-remote_file.git
+[submodule "production/modules/lvm"]
+	path = production/modules/lvm
+	url = https://github.com/puppetlabs/puppetlabs-lvm.git
