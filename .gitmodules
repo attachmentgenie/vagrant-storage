@@ -13,9 +13,12 @@
 [submodule "production/modules/minio"]
 	path = production/modules/minio
 	url = git@github.com:attachmentgenie/puppet-minio.git
-[submodule "production/modules/remote_file"]
-	path = production/modules/remote_file
-	url = https://github.com/lwf/puppet-remote_file.git
 [submodule "production/modules/lvm"]
 	path = production/modules/lvm
 	url = https://github.com/puppetlabs/puppetlabs-lvm.git
+[submodule "production/modules/archive"]
+	path = production/modules/archive
+	url = git@github.com:voxpupuli/puppet-archive.git
+[submodule "production/modules/systemd"]
+	path = production/modules/systemd
+	url = https://github.com/camptocamp/puppet-systemd.git
