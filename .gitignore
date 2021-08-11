@@ -6,8 +6,9 @@ vagrant.yaml
 *.rpmnew
 *.rpmsave
 *.vdi
-
-# Module directory
+#Bolt
+Boltdir/.rerun.json
+Boltdir/site-modules/
 .terraform/
 # Secrets files
 *.tfvars
@@ -15,4 +16,3 @@ vagrant.yaml
 *.tfstate
 *.tfstate.backup
 *.tfstate.lock.info
-
