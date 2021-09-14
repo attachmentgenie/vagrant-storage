@@ -1,3 +1,27 @@
 ---
+classes:
+  - roles::storage
 profiles::bootstrap::firewall: true
 profiles::bootstrap::firewall::purge: false
+profiles::storage::ceph: true
+profiles::storage::ceph::device: '/dev/sdb'
+profiles::storage::gluster: true
+profiles::storage::gluster::device: '/dev/sdc'
+profiles::storage::gluster::manage_disk: true
+profiles::storage::gluster::peers:
+  file01.storage.vagrant: {}
+  file02.storage.vagrant: {}
+  file03.storage.vagrant: {}
+profiles::storage::gluster::volumes:
+  vg0:
+    replica: 3
+    bricks:
+      - 'file01.storage.vagrant:/var/lib/gluster/brick'
+      - 'file02.storage.vagrant:/var/lib/gluster/brick'
+      - 'file03.storage.vagrant:/var/lib/gluster/brick'
+profiles::storage::minio: true
+profiles::storage::minio::config:
+  MINIO_DEPLOYMENT_DEFINITION: 'http://192.168.50.4{2...5}:9090/var/lib/minio'
+profiles::storage::minio::device: '/dev/sdd'
+profiles::storage::minio::listen_address: '%{::ipaddress_eth1}'
+profiles::storage::minio::manage_disk: true

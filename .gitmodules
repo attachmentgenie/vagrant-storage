@@ -12,7 +12,7 @@
 	url = git@github.com:puppetlabs/puppetlabs-firewall.git
 [submodule "production/modules/minio"]
 	path = production/modules/minio
-	url = git@github.com:attachmentgenie/puppet-minio.git
+	url = https://github.com/kogitoapp/puppet-minio.git 
 [submodule "production/modules/lvm"]
 	path = production/modules/lvm
 	url = https://github.com/puppetlabs/puppetlabs-lvm.git
@@ -22,3 +22,9 @@
 [submodule "production/modules/systemd"]
 	path = production/modules/systemd
 	url = https://github.com/camptocamp/puppet-systemd.git
+[submodule "production/modules/gluster"]
+	path = production/modules/gluster
+	url = https://github.com/voxpupuli/puppet-gluster.git
+[submodule "production/modules/ceph"]
+	path = production/modules/ceph
+	url = https://github.com/openstack/puppet-ceph.git

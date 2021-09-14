@@ -27,4 +27,4 @@ vagrant starter kit
 
 ### (G)UI interfaces
 
-    minio: http://minio.storage.vagrant:9090/
+    minio: http://file01.storage.vagrant:9091/

@@ -3,12 +3,45 @@ required_plugins:
     - vagrant-hostmanager
     - vagrant-puppet-install
 nodes:
-    - name: minio
-      hostname: minio.storage.vagrant
+    - name: file01
+      hostname: file01.storage.vagrant
       box: bento/centos-7.9
       ip: 192.168.50.42
       disks:
+      - name: ceph
+        size: 1
+      - name: gluster
+        size: 1
       - name: minio
-        size: 2
-puppet_version: 6.21.1
+        size: 1
+    - name: file02
+      hostname: file02.storage.vagrant
+      box: bento/centos-7.9
+      ip: 192.168.50.43
+      disks:
+      - name: ceph
+        size: 1
+      - name: gluster
+        size: 1
+      - name: minio
+        size: 1
+    - name: file03
+      hostname: file03.storage.vagrant
+      box: bento/centos-7.9
+      ip: 192.168.50.44
+      disks:
+      - name: ceph
+        size: 1
+      - name: gluster
+        size: 1
+      - name: minio
+        size: 1
+    - name: file04
+      hostname: file04.storage.vagrant
+      box: bento/centos-7.9
+      ip: 192.168.50.45
+      disks:
+      - name: minio
+        size: 1
+puppet_version: 6.24.0
 virtualbox_group: '/Vagrant/storage'
